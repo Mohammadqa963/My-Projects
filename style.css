@@ -9,6 +9,35 @@
   --danger:#dc2626;
   --warning:#f59e0b;
 }
+[data-theme="dark"] {
+  --bg: #1e293b;
+  --text: #e2e8f0;
+  --card: #334155;
+  --primary: #22d3ee;
+  --muted: #94a3b8;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header, .footer, .card {
+  background: var(--card);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: var(--card);
+}
+
+.btn.ghost {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.meta, .progress-sub {
+  color: var(--muted);
+}
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -159,3 +188,4 @@ header{
 .progress-sub{font-size:12px; color:#64748b}
 .reset-link{color:#0ea5e9; font-weight:700; cursor:pointer}
 .reset-link:hover{text-decoration:underline}
+
