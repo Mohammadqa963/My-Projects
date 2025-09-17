@@ -409,4 +409,30 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
   });
 });
+function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('site-theme', next);
+      document.getElementById('theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    }
+
+    // 2. تحميل الثيم المحفوظ أو اتباع نظام المستخدم
+    document.addEventListener('DOMContentLoaded', () => {
+      const stored = localStorage.getItem('site-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      document.getElementById('theme-toggle').textContent = theme === 'dark' ? '☀️' : '🌙';
+
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return console.error('⛔ زر التبديل غير موجود!');
+      // 3. ربط الحدث ومتابعة الضغطات
+      btn.addEventListener('click', () => {
+        console.log('🔘 ضغطت على زر التبديل');
+        toggleTheme();
+      });
+    });
+
 
