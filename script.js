@@ -374,3 +374,39 @@ function throttle(fn, wait){
     if(now-t>=wait){ t=now; fn.apply(this,args); }
   }
 }
+// ====== Dark Mode Toggle ======
+const THEME_KEY = 'site-theme';
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+function loadTheme() {
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored === 'dark' || stored === 'light') {
+    applyTheme(stored);
+  } else {
+    // افتراضيًا نلتزم بتفضيل النظام
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  localStorage.setItem(THEME_KEY, next);
+}
+
+// تحميل الثيم عند البداية
+document.addEventListener('DOMContentLoaded', () => {
+  loadTheme();
+  const btn = document.getElementById('theme-toggle');
+  btn.addEventListener('click', () => {
+    toggleTheme();
+    // تغيّر الأيقونة
+    btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+  });
+});
+
