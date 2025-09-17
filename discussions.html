@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المناقشات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><div class="logo">EN</div><div>المناقشات</div></div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="vocabulary.html">المفردات</a>
+      <a href="grammar.html">القواعد</a>
+      <a href="discussions.html">المناقشات</a>
+      <a href="quizzes.html">الاختبارات</a>
+      <a href="placement.html">تحديد المستوى</a>
+      <span id="auth-area">
+    <button class="btn ghost" id="btn-signin">🔐 تسجيل الدخول</button>
+    <button class="btn ghost" id="btn-signout" style="display:none">🚪 تسجيل الخروج</button>
+    <span id="user-name" class="badge info" style="display:none"></span>
+  </span>
+    </nav>
+  </div>
+  <div class="progress-wrap">
+  <div class="progress">
+    <div class="progress-label">التقدّم</div>
+    <div class="progress-bar" aria-label="نسبة التقدّم">
+      <div class="fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-pct" id="progress-pct">0%</div>
+  </div>
+</div>
+
+</header>
+
+<main class="container section">
+  <div class="grid">
+    <div class="card col-6">
+      <h3>اكتب سؤالك أو افتح نقاشًا</h3>
+      <form id="discussion-form" class="discussion-form">
+        <input id="d-name" class="input" placeholder="اسمك (اختياري)" />
+        <textarea id="d-text" class="input" rows="5" placeholder="اكتب سؤالك أو موضوع النقاش..."></textarea>
+        <button class="btn primary" type="submit">نشر</button>
+      </form>
+    </div>
+    <div class="card col-6">
+      <h3>أحدث المشاركات</h3>
+      <div id="thread" class="thread"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>أفكار نقاش مقترحة</h3>
+    <ul class="list">
+      <li class="kv"><b>1.</b> What is your favorite hobby and why?</li>
+      <li class="kv"><b>2.</b> Describe your dream vacation.</li>
+      <li class="kv"><b>3.</b> Do you prefer reading books or watching movies?</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="footer"><div class="container">© 2025 جميع الحقوق محفوظة</div></footer>
+<script type="module" src="firebase-config.js"></script>
+<script src="script.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>

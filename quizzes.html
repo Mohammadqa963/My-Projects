@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الاختبارات</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><div class="logo">EN</div><div>الاختبارات</div></div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="vocabulary.html">المفردات</a>
+      <a href="grammar.html">القواعد</a>
+      <a href="discussions.html">المناقشات</a>
+      <a href="quizzes.html">الاختبارات</a>
+      <a href="placement.html">تحديد المستوى</a>
+      <span id="auth-area">
+    <button class="btn ghost" id="btn-signin">🔐 تسجيل الدخول</button>
+    <button class="btn ghost" id="btn-signout" style="display:none">🚪 تسجيل الخروج</button>
+    <span id="user-name" class="badge info" style="display:none"></span>
+  </span>
+    </nav>
+  </div>
+  <div class="progress-wrap">
+  <div class="progress">
+    <div class="progress-label">التقدّم</div>
+    <div class="progress-bar" aria-label="نسبة التقدّم">
+      <div class="fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-pct" id="progress-pct">0%</div>
+  </div>
+</div>
+
+</header>
+
+<main class="container section">
+  <div class="card">
+    <h2>اختبار سريع</h2>
+    <form id="quiz-form">
+      <div class="quiz-q">
+        <b>1) He ____ to school every day.</b>
+        <label><input type="radio" name="q1" value="a"> go</label>
+        <label><input type="radio" name="q1" value="b"> goes</label>
+        <label><input type="radio" name="q1" value="c"> going</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>2) Synonym of "big" is ____.</b>
+        <label><input type="radio" name="q2" value="a"> small</label>
+        <label><input type="radio" name="q2" value="b"> tiny</label>
+        <label><input type="radio" name="q2" value="c"> large</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>3) She is interested __ music.</b>
+        <label><input type="radio" name="q3" value="a"> in</label>
+        <label><input type="radio" name="q3" value="b"> on</label>
+        <label><input type="radio" name="q3" value="c"> at</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>4) Past of "see" is ____.</b>
+        <label><input type="radio" name="q4" value="a"> seed</label>
+        <label><input type="radio" name="q4" value="b"> seen</label>
+        <label><input type="radio" name="q4" value="c"> saw</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>5) Choose the correct article: ___ apple.</b>
+        <label><input type="radio" name="q5" value="a"> an</label>
+        <label><input type="radio" name="q5" value="b"> a</label>
+        <label><input type="radio" name="q5" value="c"> the</label>
+      </div>
+
+      <button class="btn primary" type="submit">تصحيح</button>
+      <div id="quiz-result" class="result"></div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer"><div class="container">© 2025 جميع الحقوق محفوظة</div></footer>
+<script type="module" src="firebase-config.js"></script>
+<script src="script.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>

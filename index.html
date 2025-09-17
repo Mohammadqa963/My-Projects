@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تعليم اللغة الإنجليزية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">EN</div>
+      <div>موقع تعليم الإنجليزية</div>
+    </div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="vocabulary.html">المفردات</a>
+      <a href="grammar.html">القواعد</a>
+      <a href="discussions.html">المناقشات</a>
+      <a href="quizzes.html">الاختبارات</a>
+      <a href="placement.html">تحديد المستوى</a>
+      <span id="auth-area">
+    <button class="btn ghost" id="btn-signin">🔐 تسجيل الدخول</button>
+    <button class="btn ghost" id="btn-signout" style="display:none">🚪 تسجيل الخروج</button>
+    <span id="user-name" class="badge info" style="display:none"></span>
+  </span>
+    </nav>
+  </div>
+  <div class="progress-wrap">
+  <div class="progress">
+    <div class="progress-label">التقدّم</div>
+    <div class="progress-bar" aria-label="نسبة التقدّم">
+      <div class="fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-pct" id="progress-pct">0%</div>
+  </div>
+</div>
+
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="panel">
+      <h1>ابدأ رحلتك لتعلم الإنجليزية بثقة</h1>
+      <p>مفردات مع نطق، قواعد مبسّطة، مناقشات بناءة، واختبارات تعطيك تغذية راجعة فورية.</p>
+      <div class="actions">
+        <a href="vocabulary.html" class="btn primary">🚀 ابدأ الآن</a>
+        <a href="placement.html" class="btn ghost">🎯 حدّد مستواك</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>ماذا يوفر لك هذا الموقع؟</h2>
+    <div class="grid">
+      <div class="card col-4">
+        <h3>📚 مفردات</h3>
+        <p class="meta">كلمات أساسية مع ترجمة ونطق ونسخ سريع.</p>
+      </div>
+      <div class="card col-4">
+        <h3>📖 قواعد</h3>
+        <p class="meta">شروحات مختصرة مدعومة بأمثلة واضحة.</p>
+      </div>
+      <div class="card col-4">
+        <h3>📝 اختبارات</h3>
+        <p class="meta">نتيجة فورية وتعليقات لمساعدتك على التحسن.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 جميع الحقوق محفوظة</div>
+</footer>
+<script type="module" src="firebase-config.js"></script>
+<script src="script.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تحديد المستوى</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><div class="logo">EN</div><div>تحديد المستوى</div></div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="vocabulary.html">المفردات</a>
+      <a href="grammar.html">القواعد</a>
+      <a href="discussions.html">المناقشات</a>
+      <a href="quizzes.html">الاختبارات</a>
+      <a href="placement.html">تحديد المستوى</a>
+      <span id="auth-area">
+    <button class="btn ghost" id="btn-signin">🔐 تسجيل الدخول</button>
+    <button class="btn ghost" id="btn-signout" style="display:none">🚪 تسجيل الخروج</button>
+    <span id="user-name" class="badge info" style="display:none"></span>
+  </span>
+    </nav>
+  </div>
+  <div class="progress-wrap">
+  <div class="progress">
+    <div class="progress-label">التقدّم</div>
+    <div class="progress-bar" aria-label="نسبة التقدّم">
+      <div class="fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-pct" id="progress-pct">0%</div>
+  </div>
+</div>
+
+</header>
+
+<main class="container section">
+  <div class="card">
+    <h2>اختبار تحديد المستوى</h2>
+    <form id="placement-form">
+      <div class="quiz-q">
+        <b>1) I ____ to the gym on Mondays. (habit)</b>
+        <label><input type="radio" name="p1" value="a"> go</label>
+        <label><input type="radio" name="p1" value="b"> going</label>
+        <label><input type="radio" name="p1" value="c"> went</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>2) Which is a vehicle?</b>
+        <label><input type="radio" name="p2" value="a"> apple</label>
+        <label><input type="radio" name="p2" value="b"> bus</label>
+        <label><input type="radio" name="p2" value="c"> water</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>3) Yesterday, I ____ to the park. (negative)</b>
+        <label><input type="radio" name="p3" value="a"> didn’t went</label>
+        <label><input type="radio" name="p3" value="b"> don’t go</label>
+        <label><input type="radio" name="p3" value="c"> didn’t go</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>4) Reading: If it’s cloudy, he takes an umbrella. What does he do today?</b>
+        <label><input type="radio" name="p4" value="a"> He takes an umbrella.</label>
+        <label><input type="radio" name="p4" value="b"> He never takes an umbrella.</label>
+        <label><input type="radio" name="p4" value="c"> He won’t go out.</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>5) The class starts ____ 8:00.</b>
+        <label><input type="radio" name="p5" value="a"> on</label>
+        <label><input type="radio" name="p5" value="b"> at</label>
+        <label><input type="radio" name="p5" value="c"> in</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>6) She bought a ____ beautiful red dress. (order)</b>
+        <label><input type="radio" name="p6" value="a"> red beautiful</label>
+        <label><input type="radio" name="p6" value="b"> dress red beautiful</label>
+        <label><input type="radio" name="p6" value="c"> beautiful red</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>7) I ____ many countries. (present perfect)</b>
+        <label><input type="radio" name="p7" value="a"> visit</label>
+        <label><input type="radio" name="p7" value="b"> visited</label>
+        <label><input type="radio" name="p7" value="c"> have visited</label>
+      </div>
+
+      <div class="quiz-q">
+        <b>8) Closest meaning to "purchase".</b>
+        <label><input type="radio" name="p8" value="a"> borrow</label>
+        <label><input type="radio" name="p8" value="b"> buy</label>
+        <label><input type="radio" name="p8" value="c"> sell</label>
+      </div>
+
+      <button class="btn primary" type="submit">اعرض النتيجة</button>
+      <div id="placement-result" class="result"></div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer"><div class="container">© 2025 جميع الحقوق محفوظة</div></footer>
+<script type="module" src="firebase-config.js"></script>
+<script src="script.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
