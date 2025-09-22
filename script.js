@@ -38,7 +38,7 @@ const VOCAB_WORDS = [
   {en:'Phone', ar:'هاتف', emoji:'📱'},
   {en:'City', ar:'مدينة', emoji:'🏙️'},
   {en:'Music', ar:'موسيقى', emoji:'🎵'},
-  {en:'Hello', ar:'مرحبا',},
+  {en:'Hello', ar:'مرحبا', emoji: '👋'},
 ];
 
 // دروس القواعد المُعتمدة (أضف نفس المعرفات في HTML)
@@ -410,4 +410,5 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleTheme();
   });
 });
+
 
